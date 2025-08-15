@@ -292,3 +292,7 @@ frontend : publicDir/bin
 ### 26.0.10
 
 - removed some dependencies and dotenv not using
+
+### 26.0.11
+
+- started working on chat
