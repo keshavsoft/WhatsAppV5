@@ -1,12 +1,13 @@
 {
   "name": "WhatsAppV5",
-  "version": "26.0.11",
+  "version": "26.0.12",
   "description": "CrudBackEndWithMailAndWA is the repo to create backend and database from schema and mail working",
   "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start_old": "node app",
+    "start": "node app --env-file=.env app.js"
   },
   "author": "",
   "license": "ISC",

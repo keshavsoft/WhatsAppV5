@@ -1,5 +1,5 @@
 import fs from "fs";
-import { getClientInfo } from "../CommonExpose/clientInfo.js";
+import { getClientInfo } from "../../CommonExpose/clientInfo.js";
 
 const StartFunc = async () => {
     let LocalClient = getClientInfo();

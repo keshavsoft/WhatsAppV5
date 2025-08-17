@@ -1,4 +1,4 @@
-import { getClientInfo } from "../../CommonExpose/clientInfo.js";
+import { getClientInfo } from "../../../CommonExpose/clientInfo.js";
 
 const StartFunc = async ({ inFrom, inToMessage }) => {
     const LocalClientInfo = getClientInfo();

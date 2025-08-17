@@ -7,7 +7,7 @@ import { StartFunc as StartFuncKWSServer } from "./Projects/KWSServer/EntryFile.
 import { router as routerFromFromExpose } from "./FromExpose/routes.js";
 import { router as routerFromDataFolder } from "./DataFolder/routes.js";
 
-import { StartFunc as StartFuncFromEntryFile } from "./WA/entryFile.js";
+import { StartFunc as StartFuncFromEntryFile } from "./Projects/WA/entryFile.js";
 import { ReadFunc } from "./CommonExpose/connectedClients.js";
 import { ReadFunc as wa1 } from "./CommonExpose/forWA.js";
 

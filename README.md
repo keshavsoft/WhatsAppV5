@@ -296,3 +296,7 @@ frontend : publicDir/bin
 ### 26.0.11
 
 - started working on chat
+
+### 26.0.12
+
+- working on data folder for chat saving

@@ -1,4 +1,4 @@
-import { getClientInfo, startFunc as StartFuncFromClientInfo } from "../CommonExpose/clientInfo.js";
+import { getClientInfo, startFunc as StartFuncFromClientInfo } from "../../CommonExpose/clientInfo.js";
 
 const StartFunc = () => {
     let LocalClient = getClientInfo();

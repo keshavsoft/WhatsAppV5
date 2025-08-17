@@ -1,7 +1,7 @@
 import Whatsapp from 'whatsapp-web.js';
 const { MessageMedia } = Whatsapp;
 
-import { getClientInfo } from "../../CommonExpose/clientInfo.js";
+import { getClientInfo } from "../../../CommonExpose/clientInfo.js";
 
 const StartFunc = async msg => {
     if (msg.body === "ping") {
