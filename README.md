@@ -300,3 +300,7 @@ frontend : publicDir/bin
 ### 26.0.12
 
 - working on data folder for chat saving
+
+### 26.0.13
+
+- npm run start working good
