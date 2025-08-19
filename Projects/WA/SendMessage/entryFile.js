@@ -42,7 +42,7 @@ const StartFunc = async msg => {
                 const response = await getResponseFromObject(msg.body, msg, generalResponseObject);
                 await sendResponse(response, msg);
             } catch (error) {
-                console.error('Error reading messages.json:', error);
+                
                 await msg.reply('Sorry, there was an error processing your request.');
             }
         }
