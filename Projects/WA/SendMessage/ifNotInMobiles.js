@@ -1,24 +1,29 @@
-import { getResponseFromObject, sendResponse } from "./responeGetter.js";
-import fs from 'fs';
-import path from 'path';
+import { LowSync } from "lowdb";
+import { JSONFileSync } from "lowdb/node";
 
-const StartFunc = async msg => {
-    const messageBody = msg.body;
-    
-    try {
-        // Read messages.json and pass the entire object to getResponseFromObject
-        const messagesPath = path.join(process.cwd(), 'Data', 'messages.json');
-        const generalResponseObject = JSON.parse(fs.readFileSync(messagesPath, 'utf8'));
-        
-        // Get response from the general response object
-        const response = await getResponseFromObject(messageBody, msg, generalResponseObject);
-        
-        // Send the response
-        await sendResponse(response, msg);
-    } catch (error) {
-        console.error('Error reading messages.json:', error);
-        await msg.reply('Sorry, there was an error processing your request.');
-    }
+const StartFunc = async (msg) => {
+  const messageBody = msg.body;
+
+  try {
+    const response = responser(messageBody);
+    // Send the response
+    msg.reply(response);
+  } catch (error) {
+    console.error("Error reading messages.json:", error);
+    await msg.reply("Sorry, there was an error processing your request.");
+  }
+};
+
+const responser = (messageBody) => {
+  // Path is relative to this file: Projects/WA/SendMessage/ifNotInMobiles.js
+  const db = new LowSync(new JSONFileSync("Data/messages.json"), {});
+  db.read();
+  const key = messageBody.trim();
+  const responses = db.data || {};
+  if (responses[key]) {
+    return responses[key].content;
+  }
+  return "What else can I help you with?";
 };
 
 export { StartFunc };
