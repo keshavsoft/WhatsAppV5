@@ -23,12 +23,9 @@ const StartFunc = async msg => {
 
         const LocalNumbersData = await JSONFilePreset('Data/mobiles.json', defaultData);
         console.log("LocalFromNumber : ", LocalFromNumber);
-        
         if (LocalFromNumber in LocalNumbersData.data) {
-        // User found in database  
-            // const userData = LocalNumbersData.data[LocalFromNumber];
-            await msg.reply("Welcome! You are a registered user.");
-            
+            // User found in database  
+            StartFuncFromIfInMobiles(msg)
         } else {
             StartFuncFromIfNotInMobiles(msg);
         }
