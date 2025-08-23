@@ -316,3 +316,7 @@ frontend : publicDir/bin
 ### 26.0.16
 
 - ui linked to messages
+
+### 26.0.17
+
+- new ui in V7
