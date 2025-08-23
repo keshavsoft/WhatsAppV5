@@ -21,7 +21,7 @@ const responser = (messageBody) => {
   const key = messageBody.trim();
   const responses = db.data || {};
   if (responses[key]) {
-    return responses[key].content;
+    return responses[key];
   }
   return "What else can I help you with?";
 };
