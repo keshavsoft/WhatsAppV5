@@ -1,6 +1,7 @@
 {
     "Tables": [
         "mobiles",
-        "StudentNames"
+        "StudentNames",
+        "messages"
     ]
 }

@@ -308,3 +308,7 @@ frontend : publicDir/bin
 ### 26.0.14
 
 - landing version started
+
+### 26.0.15
+
+- public v deleted, api v2 working good
