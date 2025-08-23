@@ -320,3 +320,7 @@ frontend : publicDir/bin
 ### 26.0.17
 
 - new ui in V7
+
+### 26.0.18
+
+- new ui in chat V7
