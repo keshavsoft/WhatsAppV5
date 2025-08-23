@@ -19,6 +19,8 @@ import cookieParser from 'cookie-parser';
 import { fileURLToPath } from 'url';
 import { router as routerFromV1 } from "./V1/routes.js";
 import { router as routerFromSV1 } from "./SV1/routes.js";
+import { router as routerFromV2 } from "./V2/routes.js";
+import { router as routerFromSV2 } from "./SV2/routes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 global.__basedir = path.dirname(__filename);
@@ -73,6 +75,8 @@ StartFuncKWSServer(server);
 app.use("/FromExpose", routerFromFromExpose);
 app.use("/V1", routerFromV1);
 app.use("/SV1", StartFuncFromMiddleware, routerFromSV1);
+app.use("/V2", routerFromV2);
+app.use("/SV2", StartFuncFromMiddleware, routerFromSV2);
 
 server.listen(port, StartFuncPortListen);
 
