@@ -312,3 +312,7 @@ frontend : publicDir/bin
 ### 26.0.15
 
 - public v deleted, api v2 working good
+
+### 26.0.16
+
+- ui linked to messages
