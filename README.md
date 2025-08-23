@@ -324,3 +324,7 @@ frontend : publicDir/bin
 ### 26.0.18
 
 - new ui in chat V7
+
+### 26.0.19
+
+- message send to server working

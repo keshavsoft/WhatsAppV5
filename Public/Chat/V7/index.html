@@ -257,7 +257,7 @@
                         </div>
                         <div class="flex-grow ml-4">
                             <div class="relative w-full">
-                                <input id="convo-input" type="text"
+                                <input id="ToSendMessageId" type="text"
                                     class="flex w-full border rounded-xl focus:outline-none focus:border-indigo-300 pl-4 h-10"
                                     placeholder="Add new conversation..." />
                                 <button
@@ -275,7 +275,7 @@
                         <div class="ml-4">
                             <button
                                 class="flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0"
-                                id="send-btn" type="button">
+                                id="SendButtonId" type="button">
                                 <span>Send</span>
                                 <span class="ml-2">
                                     <svg class="w-4 h-4 transform rotate-45 -mt-px" fill="none" stroke="currentColor"
@@ -295,61 +295,6 @@
 
 <script>
     let webSocket;
-    // Get DOM elements
-    const sendButton = document.getElementById('send-btn');
-    const conversationList = document.getElementById('active-convos-list');
-    const conversationTemplate = document.getElementById('convo-template');
-
-    // List of possible names to add
-    const possibleNames = [
-        'Ravi Kumar',
-        'Sneha Patel',
-        'Amit Sharma',
-        'Priya Singh',
-        'Vikram Rao',
-        'Neha Gupta',
-        'Kiran Joshi',
-        'Sunil Mehta',
-        'Divya Nair',
-        'Anil Kapoor'
-    ];
-
-    // When the Send button is clicked, add a random name as a new conversation
-    sendButton.addEventListener('click', function () {
-        // Select a random name from the list
-        const randomIndex = Math.floor(Math.random() * possibleNames.length);
-        const randomName = possibleNames[randomIndex];
-
-        // Clone the template for a new conversation
-        const newConvo = conversationTemplate.content.cloneNode(true);
-        // Set the name and initial
-        newConvo.querySelector('.convo-name').textContent = randomName;
-        newConvo.querySelector('.convo-initial').textContent = randomName.charAt(0).toUpperCase();
-
-        // Assign a different color to each new initial (cycle through a set)
-        const colorClasses = [
-            'bg-green-200',
-            'bg-orange-200',
-            'bg-pink-200',
-            'bg-purple-200',
-            'bg-blue-200',
-            'bg-yellow-200',
-            'bg-red-200',
-            'bg-indigo-200',
-            'bg-teal-200',
-            'bg-gray-200'
-        ];
-        // Count current new convos to pick color
-        const count = conversationList.querySelectorAll('.convo-initial').length;
-        const colorClass = colorClasses[count % colorClasses.length];
-        const initialDiv = newConvo.querySelector('.convo-initial');
-        // Remove any previous bg-* class
-        initialDiv.className = initialDiv.className.replace(/bg-\w+-200/g, '').trim();
-        initialDiv.classList.add(colorClass);
-
-        // Add the new conversation to the list
-        conversationList.appendChild(newConvo);
-    });
 </script>
 
 <script src="./Js/Index/WebSocket/entryFile.js" type="module"></script>
