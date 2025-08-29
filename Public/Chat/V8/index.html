@@ -52,22 +52,6 @@
                         <span class="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full">3</span>
                     </div>
                     <div class="flex flex-col space-y-1 mt-4 -mx-2 h-48 overflow-y-auto" id="active-convos-list">
-                        <!-- <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2">
-                            <div class="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full">
-                                M
-                            </div>
-                            <div class="ml-2 text-sm font-semibold">Marta Curtis</div>
-                            <div
-                                class="flex items-center justify-center ml-auto text-xs text-white bg-red-500 h-4 w-4 rounded leading-none">
-                                2
-                            </div>
-                        </button>
-                        <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2">
-                            <div class="flex items-center justify-center h-8 w-8 bg-orange-200 rounded-full">
-                                P
-                            </div>
-                            <div class="ml-2 text-sm font-semibold">Philip Tucker</div>
-                        </button> -->
                         <!-- New conversations will be added here -->
                     </div>
                     <template id="convo-template">
@@ -79,6 +63,110 @@
                                 N</div>
                             <div class="ml-2 text-sm font-semibold convo-name">New Name</div>
                         </button>
+                    </template>
+
+                    <!-- Message Templates -->
+                    <template id="in-message-template">
+                        <p hidden>This text should not be visible.</p>
+                        
+                        <div class="col-start-1 col-end-8 p-3 rounded-lg">
+                            <div class="flex flex-row items-center">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
+                                    A
+                                </div>
+                                <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                                    <div class="message-text">Message text will go here</div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template id="out-message-template">
+                        <p hidden>This text should not be visible.</p>
+                        
+                        <div class="col-start-6 col-end-13 p-3 rounded-lg">
+                            <div class="flex items-center justify-start flex-row-reverse">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
+                                    A
+                                </div>
+                                <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl">
+                                    <div class="message-text">Message text will go here</div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template id="out-message-with-status-template">
+                        <p hidden>This text should not be visible.</p>
+                        
+                        <div class="col-start-6 col-end-13 p-3 rounded-lg">
+                            <div class="flex items-center justify-start flex-row-reverse">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
+                                    A
+                                </div>
+                                <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl">
+                                    <div class="message-text">Message text will go here</div>
+                                    <div class="absolute text-xs bottom-0 right-0 -mb-5 mr-2 text-gray-500 message-status">
+                                        Seen
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template id="in-message-with-media-template">
+                        <p hidden>This text should not be visible.</p>
+                        
+                        <div class="col-start-1 col-end-8 p-3 rounded-lg">
+                            <div class="flex flex-row items-center">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
+                                    A
+                                </div>
+                                <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                                    <div class="flex flex-row items-center">
+                                        <button class="flex items-center justify-center bg-indigo-600 hover:bg-indigo-800 rounded-full h-8 w-10 media-button">
+                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="flex flex-row items-center space-x-px ml-4 audio-visualizer">
+                                            <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-4 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-12 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-6 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-5 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-4 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-3 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-1 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-1 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                                            <div class="h-4 w-1 bg-gray-500 rounded-lg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </template>
                     <div class="flex flex-row items-center justify-between text-xs mt-6">
                         <span class="font-bold">Archivied</span>
@@ -99,6 +187,8 @@
                     <div class="flex flex-col h-full overflow-x-auto mb-4">
                         <div class="flex flex-col h-full">
                             <div class="grid grid-cols-12 gap-y-2">
+                                <!-- Hardcoded messages commented out - will be added dynamically -->
+                                <!--
                                 <div class="col-start-1 col-end-8 p-3 rounded-lg">
                                     <div class="flex flex-row items-center">
                                         <div
@@ -134,22 +224,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="col-start-6 col-end-13 p-3 rounded-lg">
-                  <div class="flex items-center justify-start flex-row-reverse">
-                    <div
-                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
-                    >
-                      A
-                    </div>
-                    <div
-                      class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl"
-                    >
-                      <div>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing. ?
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
                                 <div class="col-start-1 col-end-8 p-3 rounded-lg">
                                     <div class="flex flex-row items-center">
                                         <div
@@ -249,6 +323,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                -->
                             </div>
                         </div>
                     </div>
@@ -308,7 +383,53 @@
     let webSocket;
 </script>
 
+<script>
+    // Basic function to add incoming messages (left side)
+    function addInMessage(messageText, avatar = 'A') {
+        const chatContainer = document.querySelector('.grid.grid-cols-12');
+        
+        // Clone incoming message template
+        const template = document.getElementById('in-message-template');
+        const messageElement = template.content.cloneNode(true);
+        
+        // Set message content and avatar
+        messageElement.querySelector('.message-text').textContent = messageText;
+        messageElement.querySelector('.message-avatar').textContent = avatar;
+        
+        // Add to chat
+        chatContainer.appendChild(messageElement);
+        
+        // Scroll to bottom
+        scrollToBottom();
+    }
 
+    // Basic function to add outgoing messages (right side)
+    function addOutMessage(messageText, avatar = 'A') {
+        const chatContainer = document.querySelector('.grid.grid-cols-12');
+        
+        // Clone outgoing message template
+        const template = document.getElementById('out-message-template');
+        const messageElement = template.content.cloneNode(true);
+        
+        // Set message content and avatar
+        messageElement.querySelector('.message-text').textContent = messageText;
+        messageElement.querySelector('.message-avatar').textContent = avatar;
+        
+        // Add to chat
+        chatContainer.appendChild(messageElement);
+        
+        // Scroll to bottom
+        scrollToBottom();
+    }
+
+    // Helper function to scroll to bottom
+    function scrollToBottom() {
+        const chatArea = document.querySelector('.overflow-x-auto');
+        if (chatArea) {
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+    }
+</script>
 
 <script src="./Js/Index/WebSocket/entryFile.js" type="module"></script>
 <script src="./Js/Index/entryFile.js" type="module"></script>
