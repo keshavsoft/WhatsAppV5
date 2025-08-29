@@ -328,3 +328,7 @@ frontend : publicDir/bin
 ### 26.0.19
 
 - message send to server working
+
+### 26.0.20
+
+- still working on chat v8
