@@ -1,5 +1,5 @@
 let StartFunc = (inValue) => {
-  console.log("inValue : ", inValue);
+  // console.log("inValue : ", inValue);
   jFLocalToInputUserNameId(inValue);
 };
 

@@ -332,3 +332,7 @@ frontend : publicDir/bin
 ### 26.0.20
 
 - still working on chat v8
+
+### 26.0.21
+
+- still working on chat v8 for websocketid
