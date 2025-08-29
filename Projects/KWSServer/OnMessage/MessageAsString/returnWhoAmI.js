@@ -1,5 +1,6 @@
 let StartFunc = ({ inws, inClients }) => {
-    let LocalArray = []
+    let LocalArray = [];
+
     for (let [key, value] of inClients) {
         if (key !== inws) {
             LocalArray.push(value);
