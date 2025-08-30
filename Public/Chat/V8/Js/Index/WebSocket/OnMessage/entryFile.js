@@ -25,7 +25,7 @@ let StartFunc = (event) => {
                 });
                 break;
             case "ChangeName":
-                StartFuncFromChangeName(jVarLocalParsedData.Message);
+                StartFuncFromChangeName(jVarLocalParsedData.Message , jVarLocalParsedData.fromId);
                 break;
             case "GetWebSocketId":
              StartFuncFromGetWebSocketId({inData :jVarLocalParsedData.webSocketId});
