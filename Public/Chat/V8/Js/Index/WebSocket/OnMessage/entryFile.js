@@ -2,6 +2,7 @@
 
 import { StartFunc as StartFuncFromwAProfile } from "../OnMessage/wAProfile.js";
 import { StartFunc as StartFuncFromChangeName } from "../OnMessage/ChangeName.js";
+import { StartFunc as StartFuncFromGetWebSocketId } from "../OnMessage/getWebSocketId.js";
 
 let StartFunc = (event) => {
     try {
@@ -26,6 +27,8 @@ let StartFunc = (event) => {
             case "ChangeName":
                 StartFuncFromChangeName(jVarLocalParsedData.Message);
                 break;
+            case "GetWebSocketId":
+             StartFuncFromGetWebSocketId({inData :jVarLocalParsedData.webSocketId});
             default:
                 break;
         };
