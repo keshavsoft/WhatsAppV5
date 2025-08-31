@@ -2,6 +2,7 @@ import { WebSocketServer } from 'ws';
 import { StartFunc as CommoninsertToClients } from './insertToClients.js';
 import { StartFunc as CommonOnMessage } from "./OnMessage/EntryFile.js";
 import { ReadFunc as ReadFuncFromConnectedClients } from "../../CommonExpose/connectedClients.js";
+import { ReadFunc as ReadFuncFromChatLog, InsertFunc as InsertFuncFromChatLog } from "../../CommonExpose/chatLog.js";
 
 let wss;
 
@@ -34,6 +35,7 @@ let WsOnConnection = (ws, req) => {
         // console.log("llllllllllllllll : ", inMessage, inTypeJson);
 
         CommonChatLog.push({ id: localWebSocketData.id, data: inMessage, InOut: "Out" });
+        InsertFuncFromChatLog({ id: localWebSocketData.id, data: inMessage, InOut: "Out" });
 
         if (inTypeJson) {
             ws.send(JSON.stringify(inMessage));
@@ -49,6 +51,7 @@ let WsOnConnection = (ws, req) => {
 
     ws.on('message', (data, isBinary) => {
         CommonChatLog.push({ id: localWebSocketData.id, data, InOut: "In" });
+        InsertFuncFromChatLog({ id: localWebSocketData.id, data, InOut: "In" });
 
         CommonOnMessage({
             inData: data,

@@ -10,6 +10,7 @@ import { router as routerFromDataFolder } from "./DataFolder/routes.js";
 import { StartFunc as StartFuncFromEntryFile } from "./Projects/WA/entryFile.js";
 import { ReadFunc } from "./CommonExpose/connectedClients.js";
 import { ReadFunc as wa1 } from "./CommonExpose/forWA.js";
+import { ReadFunc as ReadFuncFromChatLog } from "./CommonExpose/chatLog.js";
 
 import express from 'express';
 import http from 'http';
@@ -46,13 +47,29 @@ app.use("/id", (req, res) => {
         console.log(value); // Prints: 10, 20, 30
     };
 
-    res.end(k1.size.toString());
+    //  res.end(k1.size.toString());
+
+    res.json(Object.fromEntries(k1));
+
 });
 
-app.use("/size", (req, res) => {
-    const k1 = wa1();
+app.use("/id", (req, res) => {
+    const k1 = ReadFunc();
 
-    res.end(k1.size.toString());
+    for (const value of k1.values()) {
+        console.log(value); // Prints: 10, 20, 30
+    };
+
+    //  res.end(k1.size.toString());
+
+    res.json(Object.fromEntries(k1));
+
+});
+
+app.use("/ChatLog", (req, res) => {
+    const k1 = ReadFuncFromChatLog();
+
+    res.json(k1);
 });
 
 app.use("/wa3", (req, res) => {
