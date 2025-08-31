@@ -340,3 +340,7 @@ frontend : publicDir/bin
 ### 26.0.22
 
 - chat log common started and good till now
+
+### 26.0.23
+
+- chat log inward string perfect still need to work on object

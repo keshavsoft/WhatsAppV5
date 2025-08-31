@@ -3,7 +3,7 @@ import { StartFunc as StartFuncFromMiddleware } from "./Token/MiddleWares/entryF
 
 import { StartFunc as StartFuncPortListen } from "./PortListen.js";
 
-import { StartFunc as StartFuncKWSServer } from "./Projects/KWSServer/EntryFile.js";
+import { StartFunc as StartFuncKWSServer } from "./Projects/WebSocketServer/V1/entryFile.js";
 import { router as routerFromFromExpose } from "./FromExpose/routes.js";
 import { router as routerFromDataFolder } from "./DataFolder/routes.js";
 
@@ -98,20 +98,6 @@ app.use("/SV2", StartFuncFromMiddleware, routerFromSV2);
 server.listen(port, StartFuncPortListen);
 
 function normalizePort(val) {
-    var port = parseInt(val, 10);
-
-    if (isNaN(port)) {
-        return val;
-    }
-
-    if (port >= 0) {
-        return port;
-    }
-
-    return false;
-};
-
-function readLocal() {
     var port = parseInt(val, 10);
 
     if (isNaN(port)) {
