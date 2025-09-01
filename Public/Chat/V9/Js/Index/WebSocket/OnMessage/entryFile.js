@@ -14,8 +14,9 @@ let StartFunc = (event) => {
                 break;
             case "returnOnlineClients":
                 // Clear previous users
-                const tbody = document.querySelector("#OpenUsersId");
+                const tbody = document.querySelector("#active-convos-list");
                 if (tbody) tbody.innerHTML = "";
+
                 jVarLocalParsedData.res.forEach(element => {
                     jFLocalAddToDom({
                         inName: element.Name,
@@ -25,10 +26,10 @@ let StartFunc = (event) => {
                 });
                 break;
             case "ChangeName":
-                StartFuncFromChangeName(jVarLocalParsedData.Message , jVarLocalParsedData.fromId);
+                StartFuncFromChangeName(jVarLocalParsedData.Message, jVarLocalParsedData.fromId);
                 break;
             case "GetWebSocketId":
-             StartFuncFromGetWebSocketId({inData :jVarLocalParsedData.webSocketId});
+                StartFuncFromGetWebSocketId({ inData: jVarLocalParsedData.webSocketId });
             default:
                 break;
         };

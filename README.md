@@ -348,3 +348,7 @@ frontend : publicDir/bin
 ### 26.0.24
 
 - change name, return clients working
+
+### 26.0.25
+
+- online clients shown perfect
