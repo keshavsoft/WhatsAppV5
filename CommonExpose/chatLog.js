@@ -6,7 +6,6 @@ const ReadFunc = () => {
 
 const InsertFunc = (inObjectToInsert) => {
     CommonChatLog.push(inObjectToInsert);
-    console.log("aaaaaaaaa : ", inObjectToInsert);
 
     return true;
 };

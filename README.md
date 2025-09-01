@@ -352,3 +352,7 @@ frontend : publicDir/bin
 ### 26.0.25
 
 - online clients shown perfect
+
+### 26.0.26
+
+- log aaaa removed

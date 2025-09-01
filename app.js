@@ -80,9 +80,6 @@ app.use("/wa3", (req, res) => {
 
     // Calculate the difference in milliseconds
     const differenceInMs = (date1 - date2) / 1000;
-    // console.log("aaaaaa : ", k1, [...k1], [...k1].at(-1), "aaaaaaaa : ", differenceInMs);
-
-    console.log("aaaaaa : ", differenceInMs);
 
     res.end(differenceInMs.toString());
 });

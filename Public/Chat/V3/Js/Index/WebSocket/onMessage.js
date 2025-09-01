@@ -75,14 +75,4 @@ const wAProfile = ({ inData }) => {
     jFLocalToInputMobileNumberId(inData.me.user);
 };
 
-const jFLocalButtonClickForYes = () => {
-    // console.log("yes");
-    sendMessage({ inDataToSend: "Yes", inDataType: false });
-};
-
-const jFLocalButtonClickForNo = () => {
-    // console.log("noaaaaaaaaa00000000000000000");
-    sendMessage({ inDataToSend: "No", inDataType: false });
-};
-
 export { StartFunc };
