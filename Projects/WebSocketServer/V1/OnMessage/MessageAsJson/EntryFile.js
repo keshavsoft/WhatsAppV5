@@ -1,4 +1,4 @@
-import { StartFunc as StartFuncChangeName } from "./ChangeName.js";
+import { StartFunc as StartFuncChangeName } from "./ChangeName/V1/entryFile.js";
 import { StartFunc as StartFuncFromPeer } from "./FromPeer.js";
 import { StartFunc as StartFuncSendMessage } from "./SendMessage.js";
 import { StartFunc as StartFuncSendMessageToAll } from "./SendMessageToAll.js";
@@ -9,7 +9,7 @@ import { StartFunc as myChat } from "./myChat.js";
 import { StartFunc as wASend } from "./wASend.js";
 import { StartFunc as wASendMulti } from "./wASendMulti.js";
 
-let StartFunc = ({ inDataAsJson, inws, inClients, inWss, inChatLog }) => {
+let StartFunc = ({ inDataAsJson, inws, inClients, inWss, inChatLog, inSendFunc }) => {
     let LocalDataAsJson = inDataAsJson;
 
     if ("Type" in LocalDataAsJson) {
@@ -18,7 +18,7 @@ let StartFunc = ({ inDataAsJson, inws, inClients, inWss, inChatLog }) => {
         };
 
         if (LocalDataAsJson.Type === "ChangeName") {
-            StartFuncChangeName({ inDataAsJson: LocalDataAsJson, inws: inws, inClients: inClients, inWss });
+            StartFuncChangeName({ inClients, inws, inDataAsJson, inWss });
         };
 
         if (LocalDataAsJson.Type === "sendMessage") {
