@@ -12,7 +12,7 @@ let StartFunc = ({ inData, inws, inClients, inWss, inChatLog, inSendFunc }) => {
     try {
         let LocalDataAsJson = JSON.parse(LocalData);
 
-        CommonMessageAsJson({ inDataAsJson: LocalDataAsJson, inws, inClients, inWss, inChatLog });
+        CommonMessageAsJson({ inDataAsJson: LocalDataAsJson, inws, inClients, inWss, inChatLog, inSendFunc });
 
         return;
     } catch (error) {
