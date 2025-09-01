@@ -10,7 +10,7 @@
 </head>
 
 <body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
-    <div class="flex h-screen antialiased text-gray-800">
+    <div class="flex h-screen w-screen antialiased text-gray-800">
         <div class="flex flex-row h-full w-full overflow-x-hidden">
             <div class="flex flex-col py-8 pl-6 pr-2 w-64 bg-white flex-shrink-0">
                 <div class="flex flex-row items-center justify-center h-12 w-full">
@@ -33,8 +33,11 @@
                     <div class="flex items-center mt-2">
                         <div class="text-sm font-semibold" id="UserNameId">KeshavSoft</div>
                         <button class="ml-2 text-gray-500 hover:text-indigo-600" id="ChangeNameId">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                                </path>
                             </svg>
                         </button>
                     </div>
@@ -68,10 +71,11 @@
                     <!-- Message Templates -->
                     <template id="in-message-template">
                         <p hidden>This text should not be visible.</p>
-                        
+
                         <div class="col-start-1 col-end-8 p-3 rounded-lg">
                             <div class="flex flex-row items-center">
-                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
+                                <div
+                                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
                                     A
                                 </div>
                                 <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
@@ -83,10 +87,11 @@
 
                     <template id="out-message-template">
                         <p hidden>This text should not be visible.</p>
-                        
+
                         <div class="col-start-6 col-end-13 p-3 rounded-lg">
                             <div class="flex items-center justify-start flex-row-reverse">
-                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
+                                <div
+                                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
                                     A
                                 </div>
                                 <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl">
@@ -98,15 +103,17 @@
 
                     <template id="out-message-with-status-template">
                         <p hidden>This text should not be visible.</p>
-                        
+
                         <div class="col-start-6 col-end-13 p-3 rounded-lg">
                             <div class="flex items-center justify-start flex-row-reverse">
-                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
+                                <div
+                                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
                                     A
                                 </div>
                                 <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl">
                                     <div class="message-text">Message text will go here</div>
-                                    <div class="absolute text-xs bottom-0 right-0 -mb-5 mr-2 text-gray-500 message-status">
+                                    <div
+                                        class="absolute text-xs bottom-0 right-0 -mb-5 mr-2 text-gray-500 message-status">
                                         Seen
                                     </div>
                                 </div>
@@ -116,18 +123,24 @@
 
                     <template id="in-message-with-media-template">
                         <p hidden>This text should not be visible.</p>
-                        
+
                         <div class="col-start-1 col-end-8 p-3 rounded-lg">
                             <div class="flex flex-row items-center">
-                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
+                                <div
+                                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0 message-avatar">
                                     A
                                 </div>
                                 <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
                                     <div class="flex flex-row items-center">
-                                        <button class="flex items-center justify-center bg-indigo-600 hover:bg-indigo-800 rounded-full h-8 w-10 media-button">
-                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        <button
+                                            class="flex items-center justify-center bg-indigo-600 hover:bg-indigo-800 rounded-full h-8 w-10 media-button">
+                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                                                </path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                             </svg>
                                         </button>
                                         <div class="flex flex-row items-center space-x-px ml-4 audio-visualizer">
@@ -387,18 +400,18 @@
     // Basic function to add incoming messages (left side)
     function addInMessage(messageText, avatar = 'A') {
         const chatContainer = document.querySelector('.grid.grid-cols-12');
-        
+
         // Clone incoming message template
         const template = document.getElementById('in-message-template');
         const messageElement = template.content.cloneNode(true);
-        
+
         // Set message content and avatar
         messageElement.querySelector('.message-text').textContent = messageText;
         messageElement.querySelector('.message-avatar').textContent = avatar;
-        
+
         // Add to chat
         chatContainer.appendChild(messageElement);
-        
+
         // Scroll to bottom
         scrollToBottom();
     }
@@ -406,18 +419,18 @@
     // Basic function to add outgoing messages (right side)
     function addOutMessage(messageText, avatar = 'A') {
         const chatContainer = document.querySelector('.grid.grid-cols-12');
-        
+
         // Clone outgoing message template
         const template = document.getElementById('out-message-template');
         const messageElement = template.content.cloneNode(true);
-        
+
         // Set message content and avatar
         messageElement.querySelector('.message-text').textContent = messageText;
         messageElement.querySelector('.message-avatar').textContent = avatar;
-        
+
         // Add to chat
         chatContainer.appendChild(messageElement);
-        
+
         // Scroll to bottom
         scrollToBottom();
     }
