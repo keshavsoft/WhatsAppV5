@@ -1,10 +1,10 @@
-import { ReadFunc as ReadFuncFromChatLog } from "../../../../../CommonExpose/chatLog.js";
+import { ReturnCopyFunc as ReturnCopyFuncFromChatLog } from "../../../../../CommonExpose/chatLog.js";
 
-let StartFunc = ({ inClients, inSendFunc }) => {
-    let LocalArray = []
-     const localChatAsJson = ReadFuncFromChatLog();
-     console.log("localChatAsJson : ", localChatAsJson);
+let StartFunc = ({ inSendFunc }) => {
+    const localChatAsJson = ReturnCopyFuncFromChatLog();
+    // console.log("localChatAsJson : ", localChatAsJson);
 
     inSendFunc({ inMessage: { Type: 'ToFullChat', res: localChatAsJson }, inTypeJson: true });
-}
+};
+
 export { StartFunc };

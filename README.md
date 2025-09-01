@@ -356,3 +356,7 @@ frontend : publicDir/bin
 ### 26.0.26
 
 - log aaaa removed
+
+### 26.0.27
+
+- fullchat working good

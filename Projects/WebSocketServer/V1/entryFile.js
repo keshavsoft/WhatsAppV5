@@ -32,10 +32,12 @@ let WsOnConnection = (ws, req) => {
     let localWebSocketData = clients.get(ws);
 
     const LocalFuncSendMessage = ({ inMessage, inTypeJson = false }) => {
-        // console.log("llllllllllllllll : ", inMessage, inTypeJson);
+        const LocalMessageCopy = { ...inMessage };
 
-        // CommonChatLog.push({ id: localWebSocketData.id, data: inMessage, InOut: "Out" });
-        InsertFuncFromChatLog({ id: localWebSocketData.id, data: inMessage, InOut: "Out" });
+        // InsertFuncFromChatLog({ id: localWebSocketData.id, data: inMessage, InOut: "Out" });
+        InsertFuncFromChatLog({ id: localWebSocketData.id, data: LocalMessageCopy, InOut: "Out" });
+
+        console.log("-------- : ", inMessage, LocalMessageCopy, inTypeJson);
 
         if (inTypeJson) {
             ws.send(JSON.stringify(inMessage));
