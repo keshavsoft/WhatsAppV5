@@ -18,8 +18,13 @@ let LocalFuncToAllClients = ({ inDataAsJson, inWss }) => {
         // console.log("1111111 : ",client.readyState);
         if (client.readyState === WebSocket.OPEN) {
             // console.log("client : ",inDataAsJson);
-            client.send(JSON.stringify(inDataAsJson));
-        }
+            // client.send(JSON.stringify(inDataAsJson));
+
+            client.send(JSON.stringify({ Type: 'returnOnlineClients', res: inDataAsJson }));
+
+            // inSendFunc({ inMessage: { Type: 'returnOnlineClients', res: LocalArray }, inTypeJson: true });
+
+        };
     });
 };
 

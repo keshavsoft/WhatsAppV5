@@ -344,3 +344,7 @@ frontend : publicDir/bin
 ### 26.0.23
 
 - chat log inward string perfect still need to work on object
+
+### 26.0.24
+
+- change name, return clients working

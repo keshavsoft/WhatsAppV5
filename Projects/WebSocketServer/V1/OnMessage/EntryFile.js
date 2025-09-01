@@ -5,7 +5,7 @@ import { ReadFunc as ReadFuncFromConnectedClients } from "../../../../CommonExpo
 
 let StartFunc = ({ inData, inws, inClients, inWss, inChatLog, inSendFunc }) => {
     let LocalData = inData;
-
+    console.log("LocalData : ", LocalData);
     const clients = ReadFuncFromConnectedClients();
     let localWebSocketData = clients.get(inws);
 
@@ -16,6 +16,7 @@ let StartFunc = ({ inData, inws, inClients, inWss, inChatLog, inSendFunc }) => {
 
         return;
     } catch (error) {
+        console.log("errr : ", error);
     };
 
     InsertFuncFromChatLog({ id: localWebSocketData.id, data: LocalData.toString(), InOut: "In" });
