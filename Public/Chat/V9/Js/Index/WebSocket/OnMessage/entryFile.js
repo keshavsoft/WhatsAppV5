@@ -8,7 +8,7 @@ import { StartFunc as StartFuncFromreturnOnlineClients } from "../OnMessage/retu
 let StartFunc = (event) => {
   try {
     let jVarLocalParsedData = JSON.parse(event.data);
-    console.log("jVarLocalParsedData : ", jVarLocalParsedData);
+    // console.log("jVarLocalParsedData : ", jVarLocalParsedData);
     switch (jVarLocalParsedData?.Type) {
       case "wAProfile":
         StartFuncFromwAProfile({ inData: jVarLocalParsedData.res });
