@@ -2,7 +2,6 @@ import { ReturnCopyFunc as ReturnCopyFuncFromChatLog } from "../../../../../Comm
 
 let StartFunc = ({ inSendFunc }) => {
     const localChatAsJson = ReturnCopyFuncFromChatLog();
-    // console.log("localChatAsJson : ", localChatAsJson);
 
     inSendFunc({ inMessage: { Type: 'ToFullChat', res: localChatAsJson }, inTypeJson: true });
 };

@@ -37,7 +37,7 @@ let WsOnConnection = (ws, req) => {
         // InsertFuncFromChatLog({ id: localWebSocketData.id, data: inMessage, InOut: "Out" });
         InsertFuncFromChatLog({ id: localWebSocketData.id, data: LocalMessageCopy, InOut: "Out" });
 
-        console.log("-------- : ", inMessage, LocalMessageCopy, inTypeJson);
+        // console.log("-------- : ", inMessage, LocalMessageCopy, inTypeJson);
 
         if (inTypeJson) {
             ws.send(JSON.stringify(inMessage));

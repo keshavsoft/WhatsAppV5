@@ -72,7 +72,7 @@ let StartFunc = ({ inDataAsString, inws, inClients, inChatLog, inSendFunc }) => 
         StartFuncfromFullChat({ inDataAsString: LocalDataAsSting, inClients, inSendFunc });
     };
 
-    if (LocalDataAsSting === "ChatIN") {
+    if (LocalDataAsSting === "ChatIn") {
         StartFuncFromChatIn({ inDataAsString: LocalDataAsSting, inClients, inSendFunc });
     }
 

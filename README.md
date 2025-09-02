@@ -360,3 +360,7 @@ frontend : publicDir/bin
 ### 26.0.27
 
 - fullchat working good
+
+### 26.0.28
+
+- ChatIn perfect

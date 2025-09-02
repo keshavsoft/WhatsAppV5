@@ -1,7 +1,5 @@
 let StartFunc = (event) => {
-    event.currentTarget.send("chatin");
-
-   
+    event.currentTarget.send("ChatIn");
 };
 
 export { StartFunc };

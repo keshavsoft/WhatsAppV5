@@ -10,6 +10,7 @@ const ReturnCopyFunc = () => {
 
 const RetrunInChatOnly = () => {
     let LocalReturnChatIN = [...CommonChatLog];
+
     let LocalReturnChatINOnly = LocalReturnChatIN.filter(element => {
         return element.InOut === "In";
     });
@@ -23,4 +24,4 @@ const InsertFunc = (inObjectToInsert) => {
     return true;
 };
 
-export { ReadFunc, InsertFunc, ReturnCopyFunc };
+export { ReadFunc, InsertFunc, ReturnCopyFunc, RetrunInChatOnly };
