@@ -3,7 +3,7 @@ import { StartFunc as StartFuncFromMiddleware } from "./Token/MiddleWares/entryF
 
 import { StartFunc as StartFuncPortListen } from "./PortListen.js";
 
-import { StartFunc as StartFuncKWSServer } from "./Projects/WebSocketServer/V1/entryFile.js";
+import { StartFunc as StartFuncKWSServer } from "./Projects/WebSocketServer/V2/entryFile.js";
 import { router as routerFromFromExpose } from "./FromExpose/routes.js";
 import { router as routerFromDataFolder } from "./DataFolder/routes.js";
 

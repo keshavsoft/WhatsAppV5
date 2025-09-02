@@ -8,6 +8,15 @@ const ReturnCopyFunc = () => {
     return [...CommonChatLog];
 };
 
+const RetrunInChatOnly = () => {
+    let LocalReturnChatIN = [...CommonChatLog];
+    let LocalReturnChatINOnly = LocalReturnChatIN.filter(element => {
+        return element.InOut === "In";
+    });
+
+    return LocalReturnChatINOnly;
+};
+
 const InsertFunc = (inObjectToInsert) => {
     CommonChatLog.push(inObjectToInsert);
 
