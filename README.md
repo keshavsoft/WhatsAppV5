@@ -364,3 +364,7 @@ frontend : publicDir/bin
 ### 26.0.28
 
 - ChatIn perfect
+
+### 26.0.29
+
+- ChatLogV1.html perfect

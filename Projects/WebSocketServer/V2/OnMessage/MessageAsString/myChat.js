@@ -1,7 +1,10 @@
-let StartFunc = ({ inws, inClients, inChatLog }) => {
-    let LocalSendObject = inClients.get(inws);
+import { ReturnCopyFunc } from "../../../../../CommonExpose/chatLog.js";
 
-    let LocalMyChat = inChatLog.filter(element => {
+let StartFunc = ({ inws, inClients }) => {
+    let LocalSendObject = inClients.get(inws);
+    const LocalChatLog = ReturnCopyFunc();
+
+    let LocalMyChat = LocalChatLog.filter(element => {
         return element.id === LocalSendObject.id
     });
 
