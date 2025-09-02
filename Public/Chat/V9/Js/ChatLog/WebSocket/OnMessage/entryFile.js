@@ -4,6 +4,7 @@ import { StartFunc as StartFuncFromwAProfile } from "../OnMessage/wAProfile.js";
 import { StartFunc as StartFuncFromChangeName } from "../OnMessage/ChangeName.js";
 import { StartFunc as StartFuncFromGetWebSocketId } from "../OnMessage/getWebSocketId.js";
 import { StartFunc as StartFuncFromreturnOnlineClients } from "../OnMessage/returnOnlineClients.js";
+import { StartFunc as StartFuncFromToFullChat } from "../OnMessage/fullChat.js";
 
 let StartFunc = (event) => {
   try {
@@ -26,6 +27,9 @@ let StartFunc = (event) => {
         StartFuncFromGetWebSocketId({
           inData: jVarLocalParsedData.webSocketId,
         });
+        break;
+      case "ToFullChat":
+        StartFuncFromToFullChat({ inData: jVarLocalParsedData.res });
       default:
         break;
     }
